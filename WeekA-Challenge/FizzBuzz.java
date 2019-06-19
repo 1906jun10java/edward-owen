@@ -86,7 +86,7 @@ public class FizzBuzz {
 		return result;
 	}
 
-	//same as above but for strings
+	//same as above but for strings (secretly does nothing)
 	public static String getString(Scanner scan) {
 		String result;
 		while (true) {
