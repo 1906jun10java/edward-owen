@@ -1,5 +1,6 @@
 //package com.revature.weeka;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class FizzBuzz {
 
