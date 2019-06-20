@@ -18,6 +18,11 @@ public class FunWithStrings {
 		
 		String test = "abcde";
 		System.out.println(recursiveReverse(test));
+		
+		//added thurs
+		String testMe = "racecar";
+		System.out.println(isPalindrome(testMe, 0, testMe.length()));
+		//
 	}
 	
 	public static int factorialize(int n) {
@@ -79,4 +84,21 @@ public class FunWithStrings {
 		}
 	}
 	
+	//Added thurs
+	public static boolean isPalindrome(String s, int a, int b) {
+		//same letter
+		if(a == b) {
+			return true;
+		}
+		//if the first and last chars are not the same, it isn't a palindrome
+		if(!s.substring(a, a+1).equals(s.substring(b-1, b))) {
+			return false;
+		}
+		if(s.length() > 2) {
+			//cut off the first and last char
+			return (isPalindrome(s.substring(a+1, s.length()-1)));
+		}
+		return true;
+	}
+	//
 }
