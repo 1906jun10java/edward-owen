@@ -138,6 +138,7 @@ public class QuodMut {
 	//NB: It is possible that a progressive mutation is permitted, e.g. (using 4 )
 	//AAAA to ATTA BANK {AATA, ATTA} in this example AAAA -> ATAA is invalid but AATA->ATTA is valid
 	//Because of this, a comparison to the potential progression list was also added
+	//see TestProg.txt for an example of this
 	private int compareToBank(ArrayList<String> compareMe) {
 		int changes = 0;
 		for(String s : compareMe) {
