@@ -7,7 +7,6 @@ window.onload = function(){
         //alert("YOU FOOL");
         let array = [2,1,0,3,7,8,7,1,2,4,5,87,5,4,5,55,8,9,9,1,1,1,100,2,3,4,5];
         let num1 = document.getElementById("num1").value;
-        let num2 = document.getElementById("num2").value;
         console.log('Array: '+array);
         console.log(fibonacci(num1));
         let sorted = sortArray(array);
@@ -29,7 +28,7 @@ function fibonacci(driveTo){
     if(driveTo <= 0){
         return 0;
     }
-    for(let i = 1; i < parseInt(driveTo); i++){
+    for(let i = 1; i < parseInt(driveTo)-1; i++){
         temp = returnMe;
         returnMe = (start+returnMe);
         start = temp;
