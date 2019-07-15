@@ -1,0 +1,73 @@
+.leather{
+    background-color: #661a00;
+    color: #ffd633;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+.header{
+    margin-left: 5%;
+}
+
+.book{
+    background-color: #b8772e;
+    color: snow;
+}
+
+.bookInner{
+    background-color: #d69d5d;
+    border-radius: 4px;
+    margin: 5px;
+}
+.bookInnerDisplay{
+    margin: 5px;
+}
+
+img {
+    width: 90%;
+    height: auto;
+}
+
+body{
+    background-image: linear-gradient(#331a00, #33001a)
+}
+
+/* STOLEN FOR MODAL TEST */
+
+ /* The Modal (background) */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .bookDisplay {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: yellow;
+    text-decoration: none;
+    cursor: pointer;
+  } 
