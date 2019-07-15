@@ -1,0 +1,18 @@
+body{
+    background-image: linear-gradient(darkolivegreen, rgb(53, 68, 26));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: wheat;
+}
+
+fieldset{
+    border-color: darkgoldenrod;
+}
+
+button {
+    background-color: darkslategray;
+    border-color: darkslategray;
+    color: mediumvioletred;
+    padding: 5px;
+    border-radius: 10%;
+}
