@@ -1,0 +1,3 @@
+[submodule "Assignments/proj1_submodule"]
+	path = Assignments/proj1_submodule
+	url = https://github.com/havertok/proj1_submodule
