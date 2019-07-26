@@ -4,29 +4,62 @@
     --main-inner-color: rgba(17, 100, 102, .7);
     --bright-text: #ffcb9a;
     --dark-text: #bb9b7d;
-  }  
+}
+
+img{
+    max-height: 200px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 2px inset #d1e8e2;
+}
+
+th{
+    color: var(--bright-text);
+}
+
+body{
+    background-image: url(background.png);
+    background-size: auto;
+}
+
+legend{
+    color: #ffcb9a;
+}
+
+ul{
+    list-style: none;
+}
+
+.dropdown-menu{
+    background-color: var(--main-bg-color);
+    color: var(--bright-text);
+}
+
+.form-control{
+    background-color: var(--main-container-color);
+}
 
 .container{
     min-height: 100vh;
-}
-
-.layout, .formDiv{
-    
 }
 
 .layout{
     color: #d1e8e2;
     background: var(--main-container-color);
     border-radius: 5px;
-    box-shadow: black;
-    padding: 10px;;
+    padding: 10px;
 }
 
 .formDiv{
     color: #d1e8e2;
     background: var(--main-container-color);
     border-radius: 5px;
-    box-shadow: black
+    padding: 10px;
 }
 
 .inner{
@@ -39,7 +72,7 @@
     padding: 10px;
 }
 
-.btn-primary{
+.btn, .btn-primary{
     background-color: #d9b08c;
     border: 2px;
     border-color: #c9a003;
@@ -61,15 +94,12 @@
     width: 80vh;
 }
 
-body{
-    background-image: url("background.png");
-    background-size: auto;
+#companyReimView{
+    display: flex;
+    position: relative;
 }
 
-legend{
-    color: #ffcb9a;
-}
-
-ul{
-    list-style: none;
+#allManager{
+    position: fixed;
+    margin-bottom: auto;
 }

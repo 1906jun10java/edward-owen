@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.logging.log4j.Logger;
+
 import com.revature.proj1.beans.Credentials;
 import com.revature.proj1.beans.Employee;
 import com.revature.service.AuthenticationService;
@@ -60,6 +62,8 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("myReimbursements", emp.getMyReimbursements());
 			session.setAttribute("underlings", emp.getUnderlings());
 			session.setAttribute("validUser", emp.getUsername());
+			//Prevents browser from caching the session
+			response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
 			response.sendRedirect("mainmenu");
 		} else {
 			session.setAttribute("validUser", "No such user or invalid password");

@@ -15,30 +15,39 @@ import com.revature.proj1.utils.CompanyDBUtilities;
 
 @WebServlet("/getunderlings")
 public class EmployeeJSONServlet extends HttpServlet {
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public EmployeeJSONServlet() {
-        super();
-    }
+	private static final long serialVersionUID = 1L;
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//response.setHeader("Cache-Control", "private, no-store, no-cache, must-revalidate"); //should disable caching
-		
-		HttpSession session = request.getSession(false);
-		String username = session.getAttribute("username").toString();
-		Employee emp = CompanyDBUtilities.getEmployeeByName(username);
-		response.getWriter().write((new ObjectMapper()).writeValueAsString(emp.getUnderlings()));
+	public EmployeeJSONServlet() {
+		super();
 	}
 
 	/**
-	 * Will be used to send out a list of underlings
+	 * GET gets all the subordinates
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.sendRedirect("mainmenu.html");
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// response.setHeader("Cache-Control", "private, no-store, no-cache,
+		// must-revalidate"); //should disable caching
+
+		HttpSession session = request.getSession(false);
+		if (session == null) {
+			response.sendError(403);
+		} else {
+			String username = session.getAttribute("username").toString();
+			Employee emp = CompanyDBUtilities.getEmployeeByName(username);
+			response.getWriter().write((new ObjectMapper()).writeValueAsString(emp.getUnderlings()));
+		}
+	}
+
+	/**
+	 * POST gets all the managers
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		response.getWriter().write((new ObjectMapper()).writeValueAsString(CompanyDBUtilities.grabManagers()));
 	}
 }
